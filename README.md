@@ -1,8 +1,8 @@
-# 🤖 Projeto Kami - Robô de Sumô Autônomo | QuantumTeamUFSC
+# Projeto Kami - Robô de Sumô Autônomo
 
 Código-fonte do robô de sumô autônomo "Kami", desenvolvido pela equipe **Quantum Team** da UFSC para competições de robótica. O projeto utiliza uma placa Arduino para controlar dois motores DC e utiliza três sensores ultrassônicos para detectar e atacar o oponente de forma autônoma.
 
-## 📝 Índice
+## Índice
 
 - [Funcionalidades](#-funcionalidades)
 - [Hardware Utilizado](#-hardware-utilizado)
@@ -13,7 +13,7 @@ Código-fonte do robô de sumô autônomo "Kami", desenvolvido pela equipe **Qua
 - [Modo de Operação](#-modo-de-operação)
 - [Autores](#-autores)
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - **Controle por Estados:** O robô opera com uma máquina de estados simples (`standby`, `ready`, `fight`) para segurança e controle.
 - **Detecção de Oponentes:** Utiliza três sensores ultrassônicos (Esquerda, Centro e Direita) para mapear a posição do oponente.
@@ -23,16 +23,17 @@ Código-fonte do robô de sumô autônomo "Kami", desenvolvido pela equipe **Qua
   - Se nenhum oponente é detectado, o robô permanece parado, aguardando.
 - **Controle Remoto IR:** Um controle infravermelho (protocolo SONY) é usado para iniciar e parar o robô durante a competição, alternando entre os estados.
 
-## 🔌 Hardware Utilizado
+## Hardware Utilizado
 
-- 1x Placa Arduino (Uno, Nano, ou similar)
+- 1x Placa Arduino Uno
 - 1x Driver de Motor Duplo H-Bridge **DRV8833**
 - 2x Motores DC com rodas
 - 3x Sensores Ultrassônicos **HC-SR04**
 - 1x Receptor Infravermelho (IR)
 - 1x Bateria para alimentar o sistema
+- 2x Sensor de Refletância QRE1113 - Analógico
 
-## 🗺️ Mapeamento de Pinos
+## Mapeamento de Pinos
 
 A tabela abaixo descreve a conexão de cada componente aos pinos do Arduino, conforme definido no código.
 
@@ -54,7 +55,7 @@ A tabela abaixo descreve a conexão de cada componente aos pinos do Arduino, con
 | Receptor IR               | `DATA`       | `12`            |
 | LED On-board              | `LED_BUILTIN`| `13`            |
 
-## 🚀 Como Usar
+## Como Usar
 
 ### Pré-requisitos
 
@@ -82,7 +83,7 @@ A tabela abaixo descreve a conexão de cada componente aos pinos do Arduino, con
     - Selecione a sua placa e a porta COM correta em `Tools`.
     - Clique no botão "Upload" para carregar o código.
 
-## ⚙️ Modo de Operação
+## Modo de Operação
 
 Após carregar o código, o robô iniciará no estado `standby`. Utilize um controle remoto infravermelho (padrão SONY) com os seguintes comandos para operar o robô:
 
@@ -95,7 +96,7 @@ Após carregar o código, o robô iniciará no estado `standby`. Utilize um cont
 *No estado `ready`, o LED on-board piscará, indicando que aguarda o comando de início.*
 *No estado `fight`, o LED on-board ficará aceso continuamente.*
 
-## 👨‍💻 Autores
+## Autores
 
 Este projeto foi desenvolvido pela equipe **Quantum Team** da Universidade Federal de Santa Catarina (UFSC).
 
